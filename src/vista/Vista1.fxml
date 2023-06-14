@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="454.0" prefWidth="729.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Vista1Controlador">
+    <stylesheets>
+        <URL value="@vista1.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="ImageView" fitHeight="549.0" fitWidth="772.0" layoutX="-11.0" layoutY="-53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/Untitled-páginas-4_page-0001.jpg" />
+         </image>
+         <effect>
+            <Blend mode="GREEN" />
+         </effect>
+      </ImageView>
+      <Label layoutX="46.0" layoutY="181.0" prefHeight="81.0" prefWidth="359.0" text="TYPE NINJA" textFill="WHITE">
+         <font>
+            <Font name="IBM Plex Sans Bold" size="56.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="238.0" prefHeight="98.0" prefWidth="371.0" text="¡Adéntrate en un mundo envuelto en la oscuridad y la agilidad de los ninjas! Enfréntate a una prueba suprema de velocidad y destreza en el juego de mecanografía más épico que hayas presenciado. Prepara tus dedos, afila tu mente y desencadena el poder oculto de tus pulsaciones." textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="53.0" layoutY="252.0" prefHeight="3.0" prefWidth="155.0" style="-fx-background-color: #FFFFFF;" />
+      <Button layoutX="46.0" layoutY="321.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="110.0" style="-fx-background-color: #0065ff; -fx-background-radius: 25;" text="Learn more" textFill="WHITE">
+         <font>
+            <Font name="IBM Plex Mono Bold" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="81.0" fitWidth="68.0" layoutX="33.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/pngtree-assassin-skull-head-esport-logo-png-image_6630798.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="480.0" layoutY="120.0" prefHeight="285.0" prefWidth="235.0" style="-fx-background-color: #0747A6; -fx-background-radius: 18;">
+         <children>
+            <Label text="Sign in" textAlignment="JUSTIFY" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="60.0" top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="IBM Plex Mono Bold" size="26.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="User Name" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="15.0" top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="IBM Plex Mono Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUserName" onKeyTyped="#eventKey" style="-fx-background-radius: 15;">
+                     <VBox.margin>
+                        <Insets left="15.0" right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Password" textFill="WHITE">
+                     <font>
+                        <Font name="IBM Plex Mono Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <PasswordField fx:id="TXT" onKeyTyped="#eventKey" style="-fx-background-radius: 15;">
+                     <VBox.margin>
+                        <Insets left="15.0" right="25.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#eventAction" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #0065FF; -fx-background-radius: 15;" text="Submit" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="55.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="IBM Plex Mono Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
