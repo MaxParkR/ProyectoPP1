@@ -4,9 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/controlador/ProyectoPP1.java</file>
-            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/vista/vista1.css</file>
-            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/GeneradorDePalabras.java</file>
-            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/Jugador.java</file>
+            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/Juego.java</file>
+            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/vista/VistaMenu.fxml</file>
             <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/controlador/Vista1Controlador.java</file>
             <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/vista/Vista1.fxml</file>
         </group>

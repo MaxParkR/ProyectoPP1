@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="454.0" prefWidth="729.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Vista1Controlador">
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Vista1Controlador">
     <stylesheets>
         <URL value="@vista1.css" />
     </stylesheets>
@@ -47,7 +47,7 @@
             <Image url="@../Imagenes/pngtree-assassin-skull-head-esport-logo-png-image_6630798.png" />
          </image>
       </ImageView>
-      <VBox layoutX="480.0" layoutY="120.0" prefHeight="285.0" prefWidth="235.0" style="-fx-background-color: #0747A6; -fx-background-radius: 18;">
+      <VBox fx:id="SignInBox" layoutX="480.0" layoutY="120.0" prefHeight="285.0" prefWidth="235.0" style="-fx-background-color: #0747A6; -fx-background-radius: 18;">
          <children>
             <Label text="Sign in" textAlignment="JUSTIFY" textFill="WHITE">
                <VBox.margin>
@@ -80,7 +80,7 @@
                         <Insets left="15.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <PasswordField fx:id="TXT" onKeyTyped="#eventKey" style="-fx-background-radius: 15;">
+                  <PasswordField fx:id="txtPassword" onKeyTyped="#eventKey" style="-fx-background-radius: 15;">
                      <VBox.margin>
                         <Insets left="15.0" right="25.0" />
                      </VBox.margin>
