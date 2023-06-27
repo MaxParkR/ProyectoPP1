@@ -4,6 +4,8 @@
  */
 package controlador;
 
+
+import static controlador.AbrirVentana.cargarEscena;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,8 +22,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-import javafx.scene.effect.BoxBlur;
-import javafx.scene.layout.VBox;
+
 
 /**
  * FXML Controller class
@@ -88,15 +89,5 @@ public class Vista1Controlador implements Initializable {
 
     }
 
-    private void cargarEscena(String url, Event event) throws IOException {
-
-        ((Node) (event.getSource())).getScene().getWindow().hide();
-
-        Parent root = FXMLLoader.load(getClass().getResource(url));
-        Scene scene = new Scene(root);
-        Stage newStage = new Stage();
-        newStage.setScene(scene);
-        newStage.show();
-
-    }
+    
 }

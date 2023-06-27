@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/modelo/Jugador.java</file>
+            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/controlador/AbrirVentana.java</file>
             <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/controlador/ProyectoPP1.java</file>
-            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/Juego.java</file>
-            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/vista/VistaMenu.fxml</file>
+            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/modelo/GeneradorDePalabras.java</file>
+            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/controlador/VistaJuegoController.java</file>
+            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/controlador/VistaNewGameOptionsController.java</file>
             <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/controlador/Vista1Controlador.java</file>
-            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/vista/Vista1.fxml</file>
+            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/modelo/Juego.java</file>
+            <file>file:/C:/Users/Mateo/Documents/NetBeansProjects/ProyectoPP1/src/vista/VistaJuego.fxml</file>
         </group>
     </open-files>
 </project-private>
