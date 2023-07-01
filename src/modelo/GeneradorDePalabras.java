@@ -8,16 +8,10 @@ import java.util.Random;
 
 public class GeneradorDePalabras {
 
-    private final String lenguaje;
+    //private final String lenguaje;
+    private String[] palabras;
 
     public GeneradorDePalabras(String lenguaje) {
-        this.lenguaje = lenguaje;
-    }
-
-    public String generateWord() {
-        // generador de palabras según se seleccione el idioma
-        String word = "";
-
         if (lenguaje.equalsIgnoreCase("Inglés")) {
             String[] palabrasIngles = {"apple", "banana", "car", "dog", "elephant", "flower", "guitar", "house", "internet", "jazz",
                 "key", "lion", "moon", "notebook", "orange", "pizza", "queen", "river", "sun", "tree",
@@ -81,80 +75,75 @@ public class GeneradorDePalabras {
                 "practical", "quizzing", "resourceful", "steadfast",
                 "tactful", "upbeat", "vibrant", "witty",
                 "zealot"};
-            Random random = new Random();
-            int randomIndex = random.nextInt(palabrasIngles.length);
-            word = palabrasIngles[randomIndex];
         } else if (lenguaje.equalsIgnoreCase("Español")) {
-            String[] palabrasEspañol = {"abrazo", "aceite", "amigo", "anillo", "arbusto", "árbol", "arena", "aroma", "arte", "avenida",
+            String[] palabrasEspañol = {"abrazo", "aceite", "amigo", "anillo", "arbusto", "arbol", "arena", "aroma", "arte", "avenida",
                 "azul", "bailar", "barco", "beso", "bicicleta", "blanco", "boca", "bolsa", "botella", "brillante",
-                "cabello", "cama", "caminar", "canción", "carro", "carta", "casa", "celeste", "cerca", "cielo",
+                "cabello", "cama", "caminar", "cancion", "carro", "carta", "casa", "celeste", "cerca", "cielo",
                 "ciudad", "color", "comida", "conectar", "correr", "crecer", "crema", "cruzar", "cuerpo", "danza",
-                "día", "dibujo", "diente", "divertido", "dormir", "eco", "efecto", "elástico", "enamorado", "energía",
-                "escalera", "espacio", "espejo", "familia", "flor", "frío", "fuego", "gato", "globo", "grande",
-                "hoja", "hombre", "idea", "imagen", "jardín", "juego", "leche", "luz", "maleta", "mar",
-                "mesa", "montaña", "música", "nadar", "nieve", "noche", "nube", "número", "oso", "pájaro",
-                "palabra", "pantalón", "papel", "parque", "pasión", "pato", "pelo", "perro", "pescado", "pluma",
-                "puerta", "río", "rojo", "saludar", "secreto", "silla", "sonido", "sueño", "taza", "televisión",
+                "dia", "dibujo", "diente", "divertido", "dormir", "eco", "efecto", "elastico", "enamorado", "energia",
+                "escalera", "espacio", "espejo", "familia", "flor", "frio", "fuego", "gato", "globo", "grande",
+                "hoja", "hombre", "idea", "imagen", "jardin", "juego", "leche", "luz", "maleta", "mar",
+                "mesa", "montana", "musica", "nadar", "nieve", "noche", "nube", "numero", "oso", "pajaro",
+                "palabra", "pantalon", "papel", "parque", "pasion", "pato", "pelo", "perro", "pescado", "pluma",
+                "puerta", "rio", "rojo", "saludar", "secreto", "silla", "sonido", "sueno", "taza", "television",
                 "tierra", "tiempo", "tormenta", "trabajo", "universo", "verano", "verde", "vestido", "viento", "volar",
-                "zanahoria", "zapato", "águila", "ámbar", "ámigo", "ámbar", "ánfora", "ánimo", "ébano", "éxito", "éter",
-                "étnico", "ágil", "água", "época", "óleo", "ópera", "óptimo", "óvalo", "óxido", "único", "inconstitucionalidad", "perpendicularidad", "esdrújula", "anticonstitucionalmente",
-                "transubstanciación", "prestidigitador", "ininteligibilidad", "gubernamentalmente",
-                "electroencefalografía", "paleontológico", "autorretrato", "sobrealimentación",
-                "desoxirribonucleico", "desobstruccionismo", "eclesiásticamente", "descentralización",
-                "paradigmatológico", "desproporcionadamente", "contrarrevolucionario", "paralelepípedo",
-                "monosilábico", "aerodinámicamente", "ultramicroscopio", "autotransportable",
-                "psicoanalíticamente", "arqueoastronomía", "desesperanzadoramente", "discrecionalidad",
-                "hipopotomonstrosesquipedaliofobia", "encefalograma", "contrainteligencia", "hipopótamo",
-                "hidroelectrolítico", "neuropsiquiatría", "reumatológico", "trascendentalismo",
-                "macroeconómicamente", "autorregulación", "paleontólogo", "desarraigamiento",
-                "transiluminación", "fotodisociación", "antisubversivo", "otorrinolaringólogo",
-                "hipocondríaco", "desfibrilador", "polarización", "desencadenante",
-                "esternocleidomastoideo", "lexicográficamente", "hipermercado", "policromático",
-                "biotecnológico", "oftalmológico", "desmembramiento", "bucodental",
+                "zanahoria", "zapato", "aguila", "ambar", "amigo", "ambar", "anfora", "animo", "ebano", "exito", "eter",
+                "etnico", "agil", "agua", "epoca", "oleo", "opera", "optimo", "ovalo", "oxido", "unico", "inconstitucionalidad", "perpendicularidad", "esdrujula", "anticonstitucionalmente",
+                "transubstanciacion", "prestidigitador", "ininteligibilidad", "gubernamentalmente",
+                "electroencefalografia", "paleontologico", "autorretrato", "sobrealimentacion",
+                "desoxirribonucleico", "desobstruccionismo", "eclesiasticamente", "descentralizacion",
+                "paradigmatologico", "desproporcionadamente", "contrarrevolucionario", "paralelepipedo",
+                "monosilabico", "aerodinamicamente", "ultramicroscopio", "autotransportable",
+                "psicoanaliticamente", "arqueoastronomia", "desesperanzadoramente", "discrecionalidad",
+                "hipopotomonstrosesquipedaliofobia", "encefalograma", "contrainteligencia", "hipopotamo",
+                "hidroelectrolitico", "neuropsiquiatria", "reumatologico", "trascendentalismo",
+                "macroeconomicamente", "autorregulacion", "paleontologo", "desarraigamiento",
+                "transiluminacion", "fotodisociacion", "antisubversivo", "otorrinolaringologo",
+                "hipocondriaco", "desfibrilador", "polarizacion", "desencadenante",
+                "esternocleidomastoideo", "lexicograficamente", "hipermercado", "policromatico",
+                "biotecnologico", "oftalmologico", "desmembramiento", "bucodental",
                 "concientizadamente", "acantilado", "circunstancialmente", "colaboracionismo",
-                "espectroscopio", "electrodoméstico", "sociolingüística", "subdirector",
-                "desprestigio", "esternocleidomastoideitis", "geopolíticamente", "heterosexualidad",
-                "infundadamente", "interpretativamente", "intelectualización", "microrred",
-                "desestabilización", "perfeccionamiento", "policondritis", "semiología",
-                "oftalmopatía", "aracnofobia", "procrastinación", "desestresante",
-                "determinación", "discriminación", "efectivamente", "desfavorablemente",
-                "expectativas", "frustración", "generosamente", "habitualmente",
-                "independientemente", "justificación", "karma", "lamentablemente",
-                "manipulación", "necesariamente", "obstinadamente", "patológicamente",
+                "espectroscopio", "electrodomestico", "sociolinguistica", "subdirector",
+                "desprestigio", "esternocleidomastoideitis", "geopoliticamente", "heterosexualidad",
+                "infundadamente", "interpretativamente", "intelectualizacion", "microrred",
+                "desestabilizacion", "perfeccionamiento", "policondritis", "semiotica",
+                "oftalmopatia", "aracnofobia", "procrastinacion", "desestresante",
+                "determinacion", "discriminacion", "efectivamente", "desfavorablemente",
+                "expectativas", "frustracion", "generosamente", "habitualmente",
+                "independientemente", "justificacion", "karma", "lamentablemente",
+                "manipulacion", "necesariamente", "obstinadamente", "patologicamente",
                 "querencia", "responsabilidad", "satisfactoriamente", "tumultuosamente",
-                "ultrasonografía", "vulnerabilidad", "xenofobia", "yuxtaposición",
-                "zoogeografía", "absurdo", "benevolencia", "consecuencia", "delicado",
-                "elogiante", "formidable", "gracioso", "hipótesis",
+                "ultrasonografia", "vulnerabilidad", "xenofobia", "yuxtaposicion",
+                "zoogeografia", "absurdo", "benevolencia", "consecuencia", "delicado",
+                "elogiante", "formidable", "gracioso", "hipotesis",
                 "imparcial", "juicioso", "conocimiento", "luminoso",
                 "meticuloso", "nutrir", "objetivo", "prevalente",
                 "quemar", "resiliente", "sofisticado", "transparente",
-                "último", "vibrante", "vagar", "zelo",
+                "ultimo", "vibrante", "vagar", "zelo",
                 "adecuado", "brisk", "coherente", "diligente",
-                "eclectico", "florecer", "genuino", "armónico",
-                "iluminar", "jovial", "entusiasta", "lúcido",
+                "eclectico", "florecer", "genuino", "armonico",
+                "iluminar", "jovial", "entusiasta", "lucido",
                 "magnificar", "matiz", "optimista", "profundo",
                 "pintoresco", "racional", "sereno", "tangible",
-                "unificar", "versátil", "ingenioso", "celoso",
-                "acumen", "valentía", "transmitir", "destreza",
+                "unificar", "versatil", "ingenioso", "celoso",
+                "acumen", "valentia", "transmitir", "destreza",
                 "eloquencia", "fortaleza", "gratitud", "humilde",
                 "innovador", "juicio", "amabilidad", "animado",
                 "modesto", "destacable", "optimismo", "apasionado",
                 "curioso", "confiable", "sincero", "tenaz",
-                "unión", "vívido", "maravilloso", "juvenil",
+                "union", "vivido", "maravilloso", "juvenil",
                 "entusiasmo", "afable", "felicidad", "compostura",
                 "diligencia", "efervescente", "flexible", "gentil",
                 "honestidad", "perspicaz", "alegre", "conocedor",
                 "alabable", "sosegado", "noble", "observador",
-                "práctico", "curiosidad", "ingenioso", "firme",
-                "diplomático", "optimista", "vibrante", "oportuno",
+                "practico", "curiosidad", "ingenioso", "firme",
+                "diplomatico", "optimista", "vibrante", "oportuno",
                 "valiente", "entusiasta", "comunicativo", "cooperativo",
                 "paciente", "sociable", "colaborativo", "creativo"};
-
-            Random random = new Random();
-            int randomIndex = random.nextInt(palabrasEspañol.length);
-            word = palabrasEspañol[randomIndex];
         }
+    }
 
-        return word;
+    public String getNextWord() {
+        return palabras[(int) (Math.random() * palabras.length)];
     }
 }

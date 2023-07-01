@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package controlador;
 
 
@@ -44,7 +40,7 @@ public class VistaMenuController implements Initializable {
     Object evt = event.getSource();
     
     if (evt.equals(btnNewGame)){
-        cargarEscena("/vista/VistaNewGameOptions.fxml", event);
+        cargarEscena("/vista/VistaJuego2.fxml", event);
     }
     
     }

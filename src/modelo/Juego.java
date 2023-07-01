@@ -116,8 +116,8 @@ public class Juego {
     
  
     private int duracion;
-    private int cantidadDeJugadores;
     private String lenguaje;
+    private int puntos;
     
 
     
@@ -125,9 +125,9 @@ public class Juego {
         this.duracion = duracion;
     }
     
-    public void setCantidadDeJugadores(int cantidadDeJugadores){
-        this.cantidadDeJugadores = cantidadDeJugadores;
-    }
+   public int getDuracion(){
+       return duracion;
+   }
     
     public void setLenguaje(String lenguaje){
         this.lenguaje = lenguaje;
@@ -136,13 +136,13 @@ public class Juego {
     
     
     public void iniciarJuego(){
-        //Lógica para iniciar el juego
+        
         
         
     }
     
     public void terminarJuego(){
-        //Lógica para terminar el juego
+        
     }
     
     
