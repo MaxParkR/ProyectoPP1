@@ -1,7 +1,7 @@
 package controlador;
 
 
-import static controlador.AbrirVentana.cargarEscena;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,13 +26,21 @@ public class VistaMenuController implements Initializable {
     @FXML
     private Button btnNewGame;
     @FXML
-    private Button btnOptions;
-    @FXML
     private Button btnExit;
-
+   
+    private Juego juego;
+    
     /**
-     * Initializes the controller class.
+     * Inicializa en controlador de la clase
      */
+    
+    /**
+     * Maneja el evento de acción para los botones.
+     * 
+     * @param event El evento de acción.
+     * @throws IOException Si ocurre un error al cargar la vista del juego.
+     */
+    
     
     @FXML
     private void eventAction(ActionEvent event) throws IOException {
@@ -40,8 +48,19 @@ public class VistaMenuController implements Initializable {
     Object evt = event.getSource();
     
     if (evt.equals(btnNewGame)){
-        cargarEscena("/vista/VistaJuego2.fxml", event);
-    }
+            juego = new Juego();
+            
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(juego.getRoot());
+            scene.setOnKeyPressed(e -> juego.onKeyPress(e.getCode().toString()));
+            stage.setScene(scene);
+            stage.show();
+         
+    } else if (evt.equals(btnExit)) {
+            // Cerrar la ventana del juego
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.close();
+        }
     
     }
     

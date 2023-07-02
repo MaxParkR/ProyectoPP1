@@ -17,15 +17,23 @@ import javafx.stage.Stage;
 /**
  *
  * @author Mateo
+ * 
+ * Esta clase contiene el método cargarEscena el cual se encarga de cargar la escena que se tiene en un
+ * archivo .fxml y establecerla en la raíz ( root)
+ * 
  */
 public class AbrirVentana {
     
     public static void cargarEscena(String url, Event event) throws IOException {
 
+        //esta linea de código es la que ocula la ventana que se está viendo en pantalla
         ((Node) (event.getSource())).getScene().getWindow().hide();
-
+        
+        //Nos permite cargar la escena desde la URL 
         Parent root = FXMLLoader.load(AbrirVentana.class.getResource(url));
         Scene scene = new Scene(root);
+        
+        //Crea una nueva ventana y se establece la nueva escena para mostrarla
         Stage newStage = new Stage();
         newStage.setScene(scene);
         newStage.show();

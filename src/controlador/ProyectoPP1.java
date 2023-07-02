@@ -24,7 +24,7 @@ import javafx.stage.Stage;
 public class ProyectoPP1 extends Application {
     
     @Override
-    //Método abstracto al que se le agrega el escenario principal
+    //Metodo abstracto al que se le agrega el escenario principal
     public void start(Stage primaryStage) throws IOException {
     
         Parent raiz = FXMLLoader.load(getClass().getResource("/vista/Vista1.fxml"));
