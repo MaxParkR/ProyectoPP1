@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -67,15 +68,19 @@ public class Vista1Controlador implements Initializable {
         Object evt = event.getSource();
 
         if (evt.equals(btnSubmit)) {
-            if (!txtUserName.getText().isEmpty() && !txtPassword.getText().isEmpty()) {
-                //String usuario = txtUserName.getText();
-                //String contraseña = txtPassword.getText();
-
-                cargarEscena("/vista/VistaMenu.fxml", event);
-
-            } else {
-                System.out.println("error");
-            }
+            String usuario = txtUserName.getText();
+            String contraseña = txtPassword.getText();
+            
+              if (usuario.equals("Admin") && contraseña.equals("TypeNinja")) {
+            cargarEscena("/vista/VistaMenu.fxml", event);
+        } else {
+            // Mostrar un mensaje de error si las credenciales no son válidas
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Usuario y contraseña incorrectos. Por favor, ingrese credenciales válidas.");
+            alert.showAndWait();
+        }
 
         }
 
